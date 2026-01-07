@@ -94,5 +94,6 @@ Backend authentication with Node.js
 
 👩‍💻 Author
 
-Created by Maria
+Created by MA
+
 Aspiring Software Engineer · Backend & DevOps · Music & Technology
