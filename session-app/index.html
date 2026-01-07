@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Session App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>Session Control</h1>
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <p class="subtitle">Please login to your account</p>
 
-  <button id="login">Login</button>
-  <button id="action">Accion</button>
-  <button id="logout">Logout</button>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <button id="loginButton">Login</button>
+
+    <p class="message" id="message"></p>
+  </div>
 
   <script src="app.js"></script>
 </body>

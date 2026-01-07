@@ -1,35 +1,21 @@
-// ===== Estado global mínimo =====
-let isLoggedIn = false;
+// const → valores que NÃO mudam
+const loginButton = document.getElementById("loginButton");
+const message = document.getElementById("message");
 
-// ===== Função de login =====
-function login() {
-  const user = {
-    name: "Maria",
-    role: "user"
-  };
+// Simulando credenciais fixas
+const correctEmail = "test@email.com";
+const correctPassword = "123456";
 
-  isLoggedIn = true;
-  console.log("authenticated user:", user.name);
-}
+// let → valores que podem mudar
+loginButton.addEventListener("click", function () {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
 
-// ===== Função de ação protegida =====
-function doAction() {
-  if (!isLoggedIn) {
-    console.log("Denied. Login in.");
-    return;
+  if (email === correctEmail && password === correctPassword) {
+    message.textContent = "Login successful!";
+    message.style.color = "green";
+  } else {
+    message.textContent = "Invalid email or password.";
+    message.style.color = "red";
   }
-
-  const action = "Create Post";
-  console.log("Ação executada:", action);
-}
-
-// ===== Função de logout =====
-function logout() {
-  isLoggedIn = false;
-  console.log("Logout");
-}
-
-// ===== Eventos =====
-document.getElementById("login").addEventListener("click", login);
-document.getElementById("action").addEventListener("click", doAction);
-document.getElementById("logout").addEventListener("click", logout);
+});
